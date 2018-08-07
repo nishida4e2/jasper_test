@@ -19,7 +19,13 @@ public class JasperTest {
 
 		//PDFファイルに埋め込むパラメータをセット
 		HashMap<String, Object> params = new HashMap<String, Object>();
+
+		//文字列の場合
 		params.put("parameter1", "test");
+
+		//画像ファイルの場合
+		params.put("parameter2", "test.png");
+
 		JasperPrint print = JasperFillManager.fillReport(jasper, params, new JREmptyDataSource());
 
 		//出力するPDFのファイル名とファイルパスを指定
